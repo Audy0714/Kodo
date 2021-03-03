@@ -21,4 +21,4 @@ app.use('/v1', router);
 
 // ici, on pourrait aussi écrire notre 404
 
-app.listen(port, () => { console.log(`Listening on http://localhost:port`) });
+app.listen(port, () => { console.log(`Listening on http://localhost:${port}`) });
