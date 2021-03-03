@@ -12,6 +12,7 @@ La transition écologique
 - PostgreSQL 11+
 - Sqitch
 - dataMapper
+- JSDOC
   
 ## configuration
 
