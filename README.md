@@ -8,8 +8,11 @@ La transition écologique
 - dotenv
 - Express
 - pg
+- cors
 - PostgreSQL 11+
 - Sqitch
+- dataMapper
+- JSDOC
   
 ## configuration
 
@@ -21,7 +24,9 @@ sqitch deploy db:pg:kodo-ecolo
 sqitch revert db:pg:kodo-ecolo
 sqitch verify db:pg:kodo-ecolo
 
-nodemon index.js
+node index.js
+npm start
+
 
 ### Deployment method
 
