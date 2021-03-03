@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=kodo-ecolo
+
+init 2021-03-03T08:25:55Z Audrey Alexandre <audykei7907@gmail.com> # create tables
+insert 2021-03-03T08:50:51Z Audrey Alexandre <audykei7907@gmail.com> # data insertion
