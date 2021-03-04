@@ -10,7 +10,7 @@ const articleMapper = {
      */
     allArticles: async () => {
         const result = await db.query(`SELECT * FROM article;`);
-
+   
         return result.rows.map(article => new Article(article));
     },
     
@@ -26,6 +26,6 @@ const articleMapper = {
 
         return new Article(rows[0]);
     }
-}
+};
 
 module.exports = articleMapper;
