@@ -14,14 +14,14 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audrey@gmail.com",
+    "email": "audray@gmail.com",
     "password": "ghuihguh",
     "passwordConfirm": "ghuihguh",
     "firstName": "Alexandre",
     "lastName": "Audrey",
     "pseudo": "Audy",
-    "img": "'https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": 2021-02-02 21:47:18.582511+01
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-04 21:47:18.582511+01"
 }
 
 

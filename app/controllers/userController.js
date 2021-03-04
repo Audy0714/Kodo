@@ -49,17 +49,12 @@ const userController = {
             return;
         }
 
-        // 5. a. check if email exists
-        const user = await userMapper.oneUser({
-            where: {
-                email: request.body.email
-        }
-        });
+        // 5. a. check if user exists
+        const user = await userMapper.oneUser();
         // 5. b. if the user exists we don't use this email
         if (user) {
             response.send({
-                data: request.body,
-                errors: [`You already have an account`]
+                data: request.body
             });
             // this function is interrupted
             return;
@@ -69,6 +64,7 @@ const userController = {
         let hashedPassword;
         try {
             hashedPassword = await bcrypt.hash(request.body.password, 8);
+            console.log(hashedPassword);
         } catch (error) {
             console.log(error);
 
