@@ -26,14 +26,8 @@ router.get('/articles', articleController.findAll);
 */
 router.get('/articles/:id', articleController.findOne);
 
-<<<<<<< HEAD
-// ROUTE POST/registration
-//router.post('/registration', userController.signupAction);
-
-=======
 // route POST/registration
 router.post('/registration', validateBody(userSchema), userController.signupAction);
->>>>>>> dev
 
 // here, a 404 for the API
 router.use((request, response) => {
