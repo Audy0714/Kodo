@@ -32,4 +32,8 @@ class User {
     }
 }
 
+<<<<<<< HEAD
 module.exports = Article;
+=======
+module.exports = User;
+>>>>>>> dev
