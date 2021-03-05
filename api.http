@@ -14,9 +14,8 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audray@gmail.com",
+    "email": "audray1@gmail.com",
     "password": "ghuihguh",
-    "passwordConfirm": "ghuihguh",
     "firstName": "Alexandre",
     "lastName": "Audrey",
     "pseudo": "Audy",
@@ -24,4 +23,33 @@ Content-Type: application/json
     "date": "2021-03-04 21:47:18.582511+01"
 }
 
+
+### Route POST /registration
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "abram@gmail.com",
+    "password": "riothreitzqrq",
+    "firstName": "Pompo",
+    "lastName": "Abram",
+    "pseudo": "Brams",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-05 21:47:18.582511+01"
+}
+
+
+### Route POST /registration
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "elodie@gmail.com",
+    "password": "fezifjieazoiei",
+    "firstName": "Muller",
+    "lastName": "Elodie",
+    "pseudo": "Elo",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-05 20:47:18.582511+01"
+}
 

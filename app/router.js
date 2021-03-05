@@ -26,7 +26,11 @@ router.get('/articles', articleController.findAll);
 */
 router.get('/articles/:id', articleController.findOne);
 
-// route POST/registration
+/**
+*  @route POST /registration
+ * @group User - management of the collection of user
+ * @return { JSON } - the new user
+ */
 router.post('/registration', validateBody(userSchema), userController.signupAction);
 
 // here, a 404 for the API

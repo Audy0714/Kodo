@@ -4,94 +4,51 @@ const { response } = require('express');
 
 const bcrypt = require('bcrypt');
 
-const validator = require("email-validator");
+//const validator = require("email-validator");
 
 const userMapper = require('../models/userMapper');
 
 const User = require('../models/user');
 
 const userController = {
+ 
+    /**
+     * @async   
+     * @function signupAction - registering a new user
+     * @param  { Express.Request } request - userMapper.save(theUser)
+     * @param  { Express.Response } response - response.json(theUser)
+     */
     signupAction: async (request, response) => {
 
-        let errors = [];
+        // generate salt
+        const salt = await bcrypt.genSalt(10);
+        // hash password
+        const hashPassword = await bcrypt.hash(request.body.password, salt);
+        // data the new user
+        const userData = {
+            email: request.body.email,
+            password: hashPassword,
+            firstName: request.body.firstName,
+            lastName: request.body.lastName,
+            pseudo: request.body.pseudo,
+            img: request.body.img,
+            date: request.body.date
+        };
+        
+        const theUser = new User(userData);
 
-        // 1. check the empty fields (vérifie les champs vides)
-        if (
-            request.body.email.length === 0
-            || request.body.password.length === 0
-            || request.body.passwordConfirm.length === 0
-            || request.body.firstName.length === 0
-            || request.body.lastName.length === 0
-            || request.body.pseudo.length === 0
-            || request.body.img.length === 0
-            || request.body.date.length === 0
-        ) {
-            errors.push('At least one field of the form is empty');
-        }
-
-        // 2. compare passwords
-        if (request.body.password !== request.body.passwordConfirm) {
-            errors.push("Passwords don't match");
-        }
-
-        //3. check if the email is in the right format
-        if (!validator.validate(request.body.email)) {
-            errors.push('Email address is not valid'); 
-        }
-
-        //4. group the checks and interrupt if errors
-        if (errors.length) {
-            response.send({
-                data: request.body,
-                errors
-            });
-            // this function is interrupted
-            return;
-        }
-
-        // 5. a. check if user exists
-        const user = await userMapper.oneUser();
-        // 5. b. if the user exists we don't use this email
-        if (user) {
-            response.send({
-                data: request.body
-            });
-            // this function is interrupted
-            return;
-        }
-
-        // 6. hasher the password
-        let hashedPassword;
         try {
-            hashedPassword = await bcrypt.hash(request.body.password, 8);
-            console.log(hashedPassword);
-        } catch (error) {
-            console.log(error);
 
-            response.send({
-                data: request.body,
-                errors: [`processing error. Please trying again`]
-            });
-            // this function is interrupted
-            return;
-        }
+            await userMapper.save(theUser);
+            console.log(hashPassword);
+            console.log(theUser);
 
-        // 6. adding to the BDD
+            response.json(theUser);
+            console.log("The new user was well created");
 
-        const newUser = new User(request.body);
-
-        // 6. a. change the password for the hashed version
-        newUser.password = hashedPassword;
-
-        // 6. b. save to the BDD
-        try {
-            await newUser.save();
-
-            response.json(newUser);
         } catch (error) {
             response.status(403).json(error.message);
         }
-
     }
 };
 
