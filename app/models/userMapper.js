@@ -37,13 +37,20 @@ const userMapper = {
 
             throw new Error(error);
         };
-    }
+    },
 
-    /*findByEmail: async (email) => {
-         const { rows } = await db.query('SELECT * FROM "user" WHERE email = $1;', [email]);
+    /**
+     * @async
+     * @function findByEmail - find user with her email
+     * @param  { String } email - the email of the user
+     * @return { Promise } the promise of a found user
+     */
+    findByEmail: async (email) => {
+        const { rows } = await db.query(`SELECT * FROM "user" WHERE email = $1;`, [email]);
 
         return new User(rows[0]);
-    }*/
+    }
+
 };
 
 module.exports = userMapper;
