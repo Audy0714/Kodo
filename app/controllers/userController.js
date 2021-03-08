@@ -9,6 +9,20 @@ const userMapper = require('../models/userMapper');
 const User = require('../models/user');
 
 const userController = {
+
+    /**
+     * @async
+     * @function findOne - one user
+     * @param  { Express.Request } request - userMapper.oneUser(id)
+     * @param  { Express.Response } response - response.json(user)
+     */
+    findOne: async (request, response) => {
+        const { id } = request.params;
+
+        const user = await userMapper.oneUser(id);
+
+        response.json(user);
+    },
  
     /**
      * @async   

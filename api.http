@@ -1,15 +1,24 @@
 
-### Route GET /articles
+### Route GET heroku /articles
 
 GET https://kodo-ecolo.herokuapp.com/v1/articles
 
+### Route GET api /articles
 
-### Route GET /articles/{id}
+GET http://localhost:3000/v1/articles
+
+
+### Route GET heroku /articles/{id}
 
 GET https://kodo-ecolo.herokuapp.com/v1/articles/10
 
 
-### Route POST /registration
+### Route GET api /articles/{id}
+
+GET http://localhost:3000/v1/articles/1
+
+
+### Route POST heroku /registration
 
 POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
@@ -25,7 +34,7 @@ Content-Type: application/json
 }
 
 
-### Route POST /registration
+### Route POST heroku /registration
 
 POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
@@ -41,7 +50,7 @@ Content-Type: application/json
 }
 
 
-### Route POST /registration
+### Route POST heroku /registration
 
 POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
@@ -57,7 +66,7 @@ Content-Type: application/json
 }
 
 
-### Route POST /registration
+### Route POST heroku /registration
 
 POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
@@ -72,12 +81,102 @@ Content-Type: application/json
     "date": "2021-03-05 21:47:18.582511+01"
 }
 
-### Route POST /connection
 
-POST http://localhost:3000/v1/connection
+### Route POST api /registration
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "audray1@gmail.com",
+    "password": "ghuihguh",
+    "firstName": "Alexandre",
+    "lastName": "Audrey",
+    "pseudo": "Audy",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-04 21:47:18.582511+01"
+}
+
+
+### Route POST heroku /registration
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "abram@gmail.com",
+    "password": "riothreitzqrq",
+    "firstName": "Pompo",
+    "lastName": "Abram",
+    "pseudo": "Brams",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-05 21:47:18.582511+01"
+}
+
+
+### Route POST heroku /registration
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "elodie@gmail.com",
+    "password": "fezifjieazoiei",
+    "firstName": "Muller",
+    "lastName": "Elodie",
+    "pseudo": "Elo",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-05 20:47:18.582511+01"
+}
+
+
+### Route POST heroku /registration
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "matiuyo@gmail.com",
+    "password": "fezifjieazefeeoiei",
+    "firstName": "Mat",
+    "lastName": "matthieu",
+    "pseudo": "Matre",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-05 21:47:18.582511+01"
+}
+
+
+
+### Route POST heroku /login
+
+POST https://kodo-ecolo.herokuapp.com/v1/login
 Content-Type: application/json
 
 {
     "email": "vfghdkg@gmail.com",
     "password": "fdhbdjkjkdwrg"
 }
+
+
+### Route POST api /login
+
+POST http://localhost:3000/v1/login
+Content-Type: application/json
+
+{
+    "email": "vfghdkg@gmail.com",
+    "password": "fdhbdjkjkdwrg"
+}
+
+
+### Route GET heroku /profil/:id
+
+GET https://kodo-ecolo.herokuapp.com/v1/profil/1
+Content-Type: application/json
+
+
+### Route GET api /profil/:id
+
+GET http://localhost:3000/v1/profil/2
+
+
