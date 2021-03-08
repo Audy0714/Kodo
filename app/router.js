@@ -10,6 +10,9 @@ const userSchema = require('./schemas/userSchema');
 
 const { validateBody } = require('./services/validator');
 
+//const { validateQuery } = require('./services/validator');
+
+
 // ROUTES
 /**
  * @route GET /articles
@@ -31,11 +34,16 @@ router.get('/articles/:id', articleController.findOne);
  * @group User - management of the collection of user
  * @return { JSON } - the new user
  */
-router.post('/registration', validateBody(userSchema), userController.signupAction);
+router.post('/registration', validateBody(userSchema), /*validateQuery(userSchema),*/userController.signupAction);
+
+// ROUTE POST : connection
+//router.post('/connection', userController.loginUser);
 
 // here, a 404 for the API
-router.use((request, response) => {
+router.use((request, response, next) => {
     response.status(404).json('No such endpoint');
+
+    next();
 });
 
 module.exports = router;

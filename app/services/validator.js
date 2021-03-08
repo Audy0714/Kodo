@@ -32,5 +32,6 @@ const validateQuery = (schema) => (request, response, next) => {
 
 
 module.exports = {
-    validateBody
+    validateBody,
+    validateQuery
 };

@@ -4,7 +4,7 @@ const { response } = require('express');
 
 const bcrypt = require('bcrypt');
 
-//const validator = require("email-validator");
+const validator = require("email-validator");
 
 const userMapper = require('../models/userMapper');
 
@@ -25,7 +25,7 @@ const userController = {
         // hash password
         const hashPassword = await bcrypt.hash(request.body.password, salt);
         // data the new user
-        const userData = {
+        /*const userData = {
             email: request.body.email,
             password: hashPassword,
             firstName: request.body.firstName,
@@ -33,9 +33,9 @@ const userController = {
             pseudo: request.body.pseudo,
             img: request.body.img,
             date: request.body.date
-        };
+        };*/
         
-        const theUser = new User(userData);
+        const theUser = new User(request.body);
 
         try {
 
@@ -50,6 +50,14 @@ const userController = {
             response.status(403).json(error.message);
         }
     }
+
+    /*loginUser: async (request, response) => {
+        console.log(request.body);
+        // on vérifie si l'utilisateur existe
+        const userEmail = request.body.email;
+
+        const userInDB  = await userMapper.findByEmail(email);
+    }*/
 };
 
 module.exports = userController;
