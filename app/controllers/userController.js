@@ -4,7 +4,6 @@ const { response } = require('express');
 
 const bcrypt = require('bcrypt');
 
-//const validator = require("email-validator");
 
 const userMapper = require('../models/userMapper');
 
@@ -51,19 +50,37 @@ const userController = {
         }
     },
 
+    /**
+     * @async   
+     * @function loginAction - connected a user
+     * @param  { Express.Request } request - userMapper.findByEmail(userEmail)
+     * @param  { Express.Response } response - response.json(theUser)
+     */
     loginAction: async (request, response) => {
         
-      
-            const userEmail = request.body;
-            //console.log(userEmail);
+          try {
+            const userEmail = request.body.email;
+            console.log(userEmail);
 
             const theUser = await userMapper.findByEmail(userEmail);
 
-          try {
-            // je vérifie les mots de passe en les comparant
-            const validPassword = await  bcrypt.compareSync(request.body.password, theUser.password);
-            response.json(theUser.password);
+            // if user not exists
+            if (!theUser) {
+                return response.status(400).json('Invalid email or password');
+            }
+
+            // verify passwords
+            const validPassword = await  bcrypt.compare(request.body.password, theUser.password);
+
+            // if password not match
+            if (!validPassword) {
+                return response.status(400).json('Invalid email or password');
+            }
+
+            response.json(theUser);
+
             console.log(validPassword);
+
         } catch (error) {
             response.status(403).json(error.message);
         }

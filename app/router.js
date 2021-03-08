@@ -33,7 +33,11 @@ router.get('/articles/:id', articleController.findOne);
  */
 router.post('/registration', validateBody(userSchema), userController.signupAction);
 
-// Route POST /connection
+/**
+*  @route POST /login
+ * @group User - management of the collection of user
+ * @return { JSON } - the user connected
+ */
 router.post('/login', userController.loginAction);
 
 // here, a 404 for the API
