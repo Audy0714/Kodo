@@ -53,3 +53,12 @@ Content-Type: application/json
     "date": "2021-03-05 20:47:18.582511+01"
 }
 
+### Route POST /login
+POST http://localhost:3000/v1/login
+Content-Type: application/json
+
+{
+    "email": "elodie@gmail.com",
+    "password": "fezifjieazoiei",
+    "firstName": "Muller"
+}

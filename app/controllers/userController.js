@@ -49,6 +49,24 @@ const userController = {
         } catch (error) {
             response.status(403).json(error.message);
         }
+    },
+
+    loginAction: async (request, response) => {
+        
+      
+            const userEmail = request.body;
+            //console.log(userEmail);
+
+            const theUser = await userMapper.findByEmail(userEmail);
+
+          try {
+            // je vérifie les mots de passe en les comparant
+            const validPassword = await  bcrypt.compareSync(request.body.password, theUser.password);
+            response.json(theUser.password);
+            console.log(validPassword);
+        } catch (error) {
+            response.status(403).json(error.message);
+        }
     }
 };
 

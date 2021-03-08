@@ -33,9 +33,14 @@ router.get('/articles/:id', articleController.findOne);
  */
 router.post('/registration', validateBody(userSchema), userController.signupAction);
 
+// Route POST /connection
+router.post('/login', userController.loginAction);
+
 // here, a 404 for the API
-router.use((request, response) => {
+router.use((request, response, next) => {
     response.status(404).json('No such endpoint');
+
+    next();
 });
 
 module.exports = router;

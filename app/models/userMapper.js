@@ -37,6 +37,12 @@ const userMapper = {
 
             throw new Error(error);
         };
+    },
+
+    findByEmail: async (email) => {
+        const { rows } = await db.query(`SELECT * FROM "user" WHERE email = $1;`, [email]);
+
+        return new User(rows[0]);
     }
 };
 
