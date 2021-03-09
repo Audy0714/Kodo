@@ -62,6 +62,8 @@ const userMapper = {
                     img = $6;`,
         [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
         );
+
+        return new User(rows[0]);
     }    
 
 };
