@@ -30,6 +30,14 @@ router.get('/articles', articleController.findAll);
 router.get('/articles/:id', articleController.findOne);
 
 /**
+ * @route GET /profil/:id
+ * @group User - management of the collection of users
+ * @param { Number } id.path.required - id of the user
+ * @return { JSON } - the user
+*/
+router.get('/profil/:id', userController.findOne);
+
+/**
 *  @route POST /registration
  * @group User - management of the collection of user
  * @return { JSON } - the new user
@@ -43,6 +51,9 @@ router.post('/registration', validateBody(userSchema), /*validateQuery(userSchem
  * @return { JSON } - the user connected
  */
 router.post('/login', userController.loginAction);
+
+// route PATCH / settings
+router.patch('/settings/profil/:id', userController.modifyUser);
 
 // here, a 404 for the API
 router.use((request, response, next) => {
