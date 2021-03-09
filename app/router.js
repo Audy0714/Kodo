@@ -52,6 +52,9 @@ router.post('/registration', validateBody(userSchema), /*validateQuery(userSchem
  */
 router.post('/login', userController.loginAction);
 
+// route PATCH / settings
+router.patch('/settings/profil/:id', userController.modifyUser);
+
 // here, a 404 for the API
 router.use((request, response, next) => {
     response.status(404).json('No such endpoint');
