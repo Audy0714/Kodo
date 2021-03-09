@@ -78,7 +78,7 @@ VALUES
     ('Q10 Avez-vous déjà adopter la gourde ?', 3);
 
 INSERT INTO challenge
-    ("level_id", "description", level_id)
+    ("day", "description", level_id)
 VALUES
     ('Jour 1', 'Installe le moteur de recherche ECOSIA', 1),
     ('Jour 2', 'Efface tes mails et désinscris toi des newsletters', 1),
@@ -98,7 +98,7 @@ VALUES
     ('Jour 2', 'Passer une journée avec Greenpeace (ou la planifier)', 3),
     ('Jour 3', 'Faire le `FILL the bottle challenge` : remplir une bouteille entière de mégot', 3),
     ('Jour 4', 'Réaliser le trashtag challenge (nettoyer un endroit entier comme une fôret, une plage...)', 3),
-    ('Jour 5', 'Arrêter les produits ménagers et réaliser un spray tout en 1', 3                                                                   ),
+    ('Jour 5', 'Arrêter les produits ménagers et réaliser un spray tout en 1', 3),
     ('Jour 6', 'Essayer l’application too good to go', 3),
     ('Jour 7', 'Faire les courses du jour en vrac (acheter que sans emballage ou emballage réduit) et ne pas utiliser de plastique toute la journée', 3);
 
