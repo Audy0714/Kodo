@@ -56,7 +56,7 @@ VALUES
     ('Q3 Quel genre de consommateur êtes-vous ?', 8),
     ('Q3 Quel genre de consommateur êtes-vous ?', 9),
     ('Q4 Pour faire ma toilette :', 10),
-    ('Q4 Pour faire ma toilette :',11),
+    ('Q4 Pour faire ma toilette :', 11),
     ('Q4 Pour faire ma toilette :', 12),
     ('Q5 Pour boire mon café (ou ma bière) :', 13),
     ('Q5 Pour boire mon café (ou ma bière) :', 14),
