@@ -59,11 +59,13 @@ const userMapper = {
                     first_name = $3,
                     last_name = $4,
                     pseudo = $5,
-                    img = $6;`,
+                    img = $6
+                WHERE email = $1
+                AND pseudo = $5;`,
         [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
         );
 
-        return new User(rows[0]);
+        //return new User(rows[0]);
     }    
 
 };
