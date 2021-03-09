@@ -42,7 +42,7 @@ router.get('/profil/:id', userController.findOne);
  * @group User - management of the collection of user
  * @return { JSON } - the new user
  */
-router.post('/registration', validateBody(userSchema), /*validateQuery(userSchema),*/userController.signupAction);
+router.post('/registration', validateBody(userSchema), userController.signupAction);
 
 
 /**
