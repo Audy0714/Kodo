@@ -6,6 +6,8 @@ const articleController = require('./controllers/articleController');
 
 const userController = require('./controllers/userController');
 
+const questionController = require('./controllers/questionController');
+
 const userSchema = require('./schemas/userSchema');
 
 const { validateBody } = require('./services/validator');
@@ -36,6 +38,14 @@ router.get('/articles/:id', articleController.findOne);
  * @return { JSON } - the user
 */
 router.get('/profil/:id', userController.findOne);
+
+/**
+ * @route GET /questions/:id
+ * @group Question - management of the collection of questions
+ * @param { Number } id.path.required - id of the question
+ * @return { JSON } - the question
+*/
+router.get('/questions/:id', questionController.findOne);
 
 /**
 *  @route POST /registration
