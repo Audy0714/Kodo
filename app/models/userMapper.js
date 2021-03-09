@@ -49,7 +49,20 @@ const userMapper = {
         const { rows } = await db.query(`SELECT * FROM "user" WHERE email = $1;`, [email]);
 
         return new User(rows[0]);
-    }
+    },
+
+    updateUser: async (theUser) => {
+        const { rows } = await db.query(`
+            UPDATE "user" 
+                SET email = $1,
+                    password = $2,
+                    first_name = $3,
+                    last_name = $4,
+                    pseudo = $5,
+                    img = $6;`,
+        [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
+        );
+    }    
 
 };
 

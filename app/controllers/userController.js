@@ -97,6 +97,33 @@ const userController = {
         } catch (error) {
             response.status(403).json(error.message);
         }
+    },
+
+    //route PATCH/settings/profil/:id
+    modifyUser: async (request, response) => {
+        try {
+            const { id } = request.params;
+            
+            const user = await userMapper.oneUser(id);
+
+             // if the user not exists
+            if (!user) {
+                response.status(400).json(`The user don't exist with id ${id}`);
+
+            } else {
+               
+                console.log(request.body);
+                const theUser = new User(request.body);
+
+                await userMapper.updateUser(theUser);
+
+                response.json(theUser);
+            }
+
+        } catch (error) {
+            response.status(403).json(error.message);
+        }
+       
     }
 
 };

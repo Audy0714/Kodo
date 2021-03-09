@@ -180,3 +180,16 @@ Content-Type: application/json
 GET http://localhost:3000/v1/profil/2
 
 
+### Route PATCH api /settings/profil/:id
+
+PATCH http://localhost:3000/v1/settings/profil/1
+Content-Type: application/json
+
+{
+    "email": "echo1@vue.fr",
+    "password": "ecologie",
+    "firstName": "Alexandre",
+    "lastName": "Audrey",
+    "pseudo": "Audy26",
+    "img": "2.png"
+}
