@@ -83,7 +83,7 @@ const userMapper = {
         );
 
         return new User(rows[0]);
-    }    
+    }
 
 };
 

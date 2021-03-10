@@ -75,6 +75,16 @@ router.post('/registration', validateBody(userSchema), userController.signupActi
 router.post('/login', userController.loginAction);
 
 /**
+*  @route POST /questions/:id
+ * @group Question - management of the collection of questions
+ * @param { Number } id.path.required - id of the question
+ * @param { String } - user responses
+ * @param { Number } - user level
+ * @return { JSON } - the user responses with level_id
+ */
+router.post('/questions/:id', questionController.handleQuestionForm);
+
+/**
  * @route PATCH /settings/profil/:id
  * @group User - management of the collection of user
  * @param { Number } id.path.required - id of the user
