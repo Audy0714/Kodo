@@ -40,11 +40,11 @@ POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
 
 {
-    "email": "abram@gmail.com",
+    "email": "abram123@gmail.com",
     "password": "riothreitzqrq",
     "firstName": "Pompo",
     "lastName": "Abram",
-    "pseudo": "Brams",
+    "pseudo": "Brams123",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-05 21:47:18.582511+01"
 }
@@ -98,7 +98,7 @@ Content-Type: application/json
 }
 
 
-### Route POST heroku /registration
+### Route POST api /registration
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
@@ -114,7 +114,7 @@ Content-Type: application/json
 }
 
 
-### Route POST heroku /registration
+### Route POST api /registration
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
@@ -130,7 +130,7 @@ Content-Type: application/json
 }
 
 
-### Route POST heroku /registration
+### Route POST api /registration
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
@@ -141,8 +141,7 @@ Content-Type: application/json
     "firstName": "Mat",
     "lastName": "matthieu",
     "pseudo": "Matre",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 21:47:18.582511+01"
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/"
 }
 
 
@@ -202,3 +201,13 @@ GET http://localhost:3000/v1/questions/6
 ### Route GET heroku /questions/{id}
 
 GET https://kodo-ecolo.herokuapp.com/v1/questions/1
+
+
+### Route GET api /challenges/:id
+
+GET http://localhost:3000/v1/challenges/21
+
+
+### Route GET heroku /challenges/id
+
+GET https://kodo-ecolo.herokuapp.com/v1/challenges/1

@@ -51,6 +51,17 @@ const userMapper = {
         return new User(rows[0]);
     },
 
+     /**
+     * @async
+     * @function updateUser - modify data user 
+     * @param  { String } email - the email of the user
+     * @param { String } password - the password of the user
+    *  @param  { String } first_name - the firstName of the user
+     * @param { String } last_name - the lastName of the user
+    *  @param  { String } pseudo - the pseudo of the user
+     * @param { String } img - the img of the user
+     * @return { Promise } the promise of modify data user
+     */
     updateUser: async (theUser) => {
         const { rows } = await db.query(`
             UPDATE "user" 
@@ -65,7 +76,7 @@ const userMapper = {
         [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
         );
 
-        //return new User(rows[0]);
+        return new User(rows[0]);
     }    
 
 };

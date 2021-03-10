@@ -8,6 +8,8 @@ const userController = require('./controllers/userController');
 
 const questionController = require('./controllers/questionController');
 
+const challengeController = require('./controllers/challengeController');
+
 const userSchema = require('./schemas/userSchema');
 
 const { validateBody } = require('./services/validator');
@@ -47,6 +49,16 @@ router.get('/profil/:id', userController.findOne);
 */
 router.get('/questions/:id', questionController.findOne);
 
+
+/**
+ * @route GET /challenges/:id
+ * @group Challenge - management of the collection of challenges
+ * @param { Number } id.path.required - id of the challenge
+ * @return { JSON } - the challenge
+*/
+router.get('/challenges/:id', challengeController.findOne);
+
+
 /**
 *  @route POST /registration
  * @group User - management of the collection of user
@@ -62,7 +74,12 @@ router.post('/registration', validateBody(userSchema), userController.signupActi
  */
 router.post('/login', userController.loginAction);
 
-// route PATCH / settings
+/**
+ * @route PATCH /settings/profil/:id
+ * @group User - management of the collection of user
+ * @param { Number } id.path.required - id of the user
+ * @return { JSON } - the user modify
+*/
 router.patch('/settings/profil/:id', userController.modifyUser);
 
 // here, a 404 for the API
