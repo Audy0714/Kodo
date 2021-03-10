@@ -22,7 +22,13 @@ const userMapper = {
     /**
      * @async   
      * @function save - save the new user
-     * @param  { Object } - theUser with userData
+     * @param  { String } email - the email of the user
+     * @param { String } password - the password of the user
+     * @param  { String } first_name - the firstName of the user
+     * @param { String } last_name - the lastName of the user
+     * @param  { String } pseudo - the pseudo of the user
+     * @param { String } img - the img of the user
+     * @param { String } date - the date of the user response questions
      * @return { Promise } - the promise insert new user in the BDD
      */
     save: async (theUser) => {

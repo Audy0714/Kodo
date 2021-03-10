@@ -56,13 +56,12 @@ POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
 
 {
-    "email": "elodie@gmail.com",
+    "email": "elodie123@gmail.com",
     "password": "fezifjieazoiei",
     "firstName": "Muller",
     "lastName": "Elodie",
-    "pseudo": "Elo",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 20:47:18.582511+01"
+    "pseudo": "Elo123",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/"
 }
 
 
@@ -88,11 +87,11 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audray1@gmail.com",
+    "email": "audray123@gmail.com",
     "password": "ghuihguh",
     "firstName": "Alexandre",
     "lastName": "Audrey",
-    "pseudo": "Audy",
+    "pseudo": "Audy123",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-04 21:47:18.582511+01"
 }

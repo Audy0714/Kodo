@@ -99,7 +99,12 @@ const userController = {
         }
     },
 
-    //route PATCH/settings/profil/:id
+    /**
+     * @async   
+     * @function modifyUsern - modify data user
+     * @param  { Express.Request } request - userMapper.oneUser(id)
+     * @param  { Express.Response } response - response.json(theUser)
+     */
     modifyUser: async (request, response) => {
         try {
             const { id } = request.params;
