@@ -175,11 +175,14 @@ GET https://kodo-ecolo.herokuapp.com/v1/profil/1
 ### Route GET api /profil/:id
 
 GET http://localhost:3000/v1/profil/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
 
 
 ### Route PATCH api /settings/profil/:id
 
 PATCH http://localhost:3000/v1/settings/profil/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
+
 Content-Type: application/json
 
 {

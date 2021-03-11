@@ -8,10 +8,7 @@ const app = express();
 
 const session = require('express-session');
 
-app.locals.appName = 'projet-la-transition-ecologique-back';
-
 const cors = require('cors');
-
 
 const port = process.env.PORT || 5478;
 
