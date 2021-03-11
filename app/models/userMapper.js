@@ -83,8 +83,14 @@ const userMapper = {
         );
 
         return new User(rows[0]);
-    }
+    },
 
+    setDate: async (id) => {
+
+        const { rows } = await db.query('SELECT date FROM "user" WHERE id = $1;', [id]);
+
+        return new User(rows[0]);
+    }
 };
 
 module.exports = userMapper;

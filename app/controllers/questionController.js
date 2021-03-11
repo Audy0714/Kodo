@@ -2,6 +2,8 @@ const { request } = require('express');
 
 const questionMapper = require('../models/questionMapper');
 
+const userMapper = require('../models/userMapper');
+
 const questionController = {
 
     /**
@@ -61,10 +63,15 @@ const questionController = {
                 
             }
 
-            response.json({ question, answers, level });
-
-            await userMapper.setDate(user.id);
-
+             // je récupère l'id et la date de l'user
+            const { userId, userDate } = request.params;
+            // j'attends que la requête de mon userMapper renvoie la date et l'id de l'user
+            const user = await userMapper.setDate(userId, userDate);
+            // le timestamps du moment
+            const setDate = Math.round(Date.now());
+        
+             response.json({ user, answers, level, setDate });
+            
         } catch (error) {
             response.status(403).json(error.message);
         }
