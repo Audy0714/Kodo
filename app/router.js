@@ -51,6 +51,13 @@ router.get('/questions/:id(\\d+)', auth, questionController.findOne);
 
 
 /**
+ * @route GET /challenges
+ * @group Challenge - management of the collection of challenges
+ * @return { JSON } - all challenges
+*/
+router.get('/challenges', auth, challengeController.findAll);
+
+/**
  * @route GET /challenges/:id
  * @group Challenge - management of the collection of challenges
  * @param { Number } id.path.required - id of the challenge

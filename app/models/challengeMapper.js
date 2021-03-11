@@ -3,6 +3,17 @@ const Challenge = require('./challenge');
 const db = require('../database');
 
 const challengeMapper = {
+
+     /**
+     * @async
+     * @function allChallenges - all challenges
+     * @return { Promise } the promise of all found challenges
+     */
+    allChallenges: async () => {
+        const result = await db.query('SELECT * FROM challenge');
+
+         return result.rows.map(challenge => new Challenge(challenge));
+    },
     /**
      * @async
      * @function oneChallenge - the challenge
