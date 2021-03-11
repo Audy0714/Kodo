@@ -20,12 +20,12 @@ npm init -y
 sqitch init kodo-ecolo --engine pg
 sqitch config --user engine.pg.client psql
 createdb kodo-ecolo
-sqitch deploy db:pg:kodo-ecolo
+sqitch deploy
 sqitch revert db:pg:kodo-ecolo
 sqitch verify db:pg:kodo-ecolo
 
-node index.js
-npm start
+npm start for node index.js
+npm test for TU
 
 
 ### Deployment method
