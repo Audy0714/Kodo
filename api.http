@@ -162,8 +162,8 @@ POST http://localhost:3000/v1/login
 Content-Type: application/json
 
 {
-    "email": "matiuyo@gmail.com",
-    "password": "fezifjieazefeeoiei"
+    "email": "elodie@gmail.com",
+    "password": "fezifjieazoiei"
 }
 
 

@@ -63,6 +63,8 @@ const questionController = {
 
             response.json({ question, answers, level });
 
+            await userMapper.setDate(user.id);
+
         } catch (error) {
             response.status(403).json(error.message);
         }

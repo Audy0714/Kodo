@@ -100,6 +100,7 @@ const userController = {
                 'id',
                 'email',
                 'pseudo',
+                'date'
             ]);
             const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
 
