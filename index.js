@@ -12,13 +12,10 @@ app.locals.appName = 'projet-la-transition-ecologique-back';
 
 const cors = require('cors');
 
-const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 5478;
 
 const router = require('./app/router');
-
-//const obj = JSON.parse(date.replace(/ 0+(?![\. }])/g, ' '));
 
 app.use(cors());
 
@@ -47,8 +44,6 @@ app.use((req, res, next) => {
 
 // le parser JSON qui récupère le payload quand il y en a un et le transforme en objet JS disponible sous request.body
 app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
 
 app.use('/v1', router);
 

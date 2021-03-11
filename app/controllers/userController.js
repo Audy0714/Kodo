@@ -1,8 +1,14 @@
+require('dotenv').config();
+
 const { request } = require('express');
 
 const { response } = require('express');
 
 const bcrypt = require('bcrypt');
+
+const jwt = require('jsonwebtoken');
+
+const _ = require('lodash');
 
 const userMapper = require('../models/userMapper');
 
@@ -89,8 +95,17 @@ const userController = {
             if (!validPassword) {
                 return response.status(400).json('Invalid email or password');
             }
+            // token
+            const newUser = _.pick(theUser, [
+                'id',
+                'email',
+                'pseudo',
+            ]);
+            const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
 
-            response.json(theUser);
+            newUser.token = token;
+
+            response.json(newUser);
 
             console.log(validPassword);
 

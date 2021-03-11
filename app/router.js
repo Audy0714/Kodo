@@ -2,6 +2,8 @@ const { Router} = require('express');
 
 const router = Router();
 
+const auth = require('./middlewares/auth');
+
 const articleController = require('./controllers/articleController');
 
 const userController = require('./controllers/userController');
@@ -13,8 +15,6 @@ const challengeController = require('./controllers/challengeController');
 const userSchema = require('./schemas/userSchema');
 
 const { validateBody } = require('./services/validator');
-
-//const { validateQuery } = require('./services/validator');
 
 
 // ROUTES
@@ -31,7 +31,7 @@ router.get('/articles', articleController.findAll);
  * @param { Number } id.path.required - id of the article
  * @return { JSON } - the article
 */
-router.get('/articles/:id', articleController.findOne);
+router.get('/articles/:id(\\d+)', articleController.findOne);
 
 /**
  * @route GET /profil/:id
@@ -39,7 +39,7 @@ router.get('/articles/:id', articleController.findOne);
  * @param { Number } id.path.required - id of the user
  * @return { JSON } - the user
 */
-router.get('/profil/:id', userController.findOne);
+router.get('/profil/:id(\\d+)', auth, userController.findOne);
 
 /**
  * @route GET /questions/:id
@@ -47,7 +47,7 @@ router.get('/profil/:id', userController.findOne);
  * @param { Number } id.path.required - id of the question
  * @return { JSON } - the question
 */
-router.get('/questions/:id', questionController.findOne);
+router.get('/questions/:id(\\d+)', auth, questionController.findOne);
 
 
 /**
@@ -56,7 +56,7 @@ router.get('/questions/:id', questionController.findOne);
  * @param { Number } id.path.required - id of the challenge
  * @return { JSON } - the challenge
 */
-router.get('/challenges/:id', challengeController.findOne);
+router.get('/challenges/:id(\\d+)', auth, challengeController.findOne);
 
 
 /**
@@ -82,7 +82,7 @@ router.post('/login', userController.loginAction);
  * @param { Number } - user level
  * @return { JSON } - the user responses with level_id
  */
-router.post('/questions/:id', questionController.handleQuestionForm);
+router.post('/questions/:id(\\d+)', auth, questionController.handleQuestionForm);
 
 /**
  * @route PATCH /settings/profil/:id
@@ -90,7 +90,7 @@ router.post('/questions/:id', questionController.handleQuestionForm);
  * @param { Number } id.path.required - id of the user
  * @return { JSON } - the user modify
 */
-router.patch('/settings/profil/:id', userController.modifyUser);
+router.patch('/settings/profil/:id(\\d+)', auth, userController.modifyUser);
 
 // here, a 404 for the API
 router.use((request, response, next) => {
