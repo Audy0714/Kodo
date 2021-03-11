@@ -1,12 +1,12 @@
 const { request } = require('express');
 
-//const User = require('../models/user');
+const User = require('../models/user');
 
 const Challenge = require('../models/challenge');
 
 const challengeMapper = require('../models/challengeMapper');
 
-//const userMapper = require('../models/userMapper');
+const userMapper = require('../models/userMapper');
 
 const challengeController = {
      /**
@@ -17,7 +17,7 @@ const challengeController = {
      */
     findOne: async (request, response) => {
 
-         /*try {
+        /*try {
             const user = await userMapper.save(user.date);
             
             request.session.user = [];
