@@ -39,11 +39,11 @@ describe('userMapper', function() {
     });
 });
 
-/*describe('userMapper', function() {
+describe('userMapper', function() {
     // insertion de fake data
     before(async function() {
         
-        const { rows } = await db.query('INSERT INTO "user" (email, password, first_name, last_name, pseudo, img) VALUES($1,$2, $3, $4, $5, $6) WHERE email = $1 AND pseudo = $5 RETURNING id;', ['mock1 email', 'mock1 password','mock1 first_name', 'mock1 last_name', 'mock1 pseudo', 'mock1 img']);
+        const { rows } = await db.query('INSERT INTO "user" (email, password, first_name, last_name, pseudo, img) VALUES($1,$2, $3, $4, $5, $6) RETURNING id;', ['mock1', 'mock1','mock1', 'mock1', 'mock1', 'mock1']);
 
         theIds.user = rows[0].id;
     });
@@ -60,7 +60,7 @@ describe('userMapper', function() {
             expect(theUser).to.be.an.instanceOf(User);
         });
     });
-});*/
+});
     
 
    
