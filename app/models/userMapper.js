@@ -4,7 +4,6 @@ const db = require('../database');
 
 const userMapper = {
 
-     
     /**
      * @async
      * @function oneUser - the user
@@ -18,7 +17,6 @@ const userMapper = {
         return new User(rows[0]);
     },
 
-    
     /**
      * @async   
      * @function save - save the new user

@@ -61,7 +61,7 @@ const questionController = {
                 
             }
 
-            response.json({ question, answers, level });
+            response.json({ level });
 
         } catch (error) {
             response.status(403).json(error.message);
