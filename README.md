@@ -25,7 +25,7 @@ sqitch deploy
 sqitch revert db:pg:kodo-ecolo
 sqitch verify db:pg:kodo-ecolo
 
-npm start for nodemon index.js
+npm start for node index.js
 (npm test for TU)
 
 
