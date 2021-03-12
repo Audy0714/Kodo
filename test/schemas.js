@@ -14,11 +14,11 @@ describe('User Schema', function() {
     before(function() {
         // l'objet user à valider
         mockUser = {
-            email: "hgugfuh2@gmail.com",
+            email: "hgugfuh3@gmail.com",
             password: "kopuyjiuy",
             firstName: "Martines",
             lastName: "Sanchez",
-            pseudo: "Mat5",
+            pseudo: "Mat4",
             img: "https://fherughre/"
         };
     });

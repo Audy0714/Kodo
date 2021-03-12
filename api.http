@@ -24,135 +24,41 @@ POST https://kodo-ecolo.herokuapp.com/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audray1@gmail.com",
-    "password": "ghuihguh",
-    "firstName": "Alexandre",
-    "lastName": "Audrey",
-    "pseudo": "Audy",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-04 21:47:18.582511+01"
-}
-
-
-### Route POST heroku /registration
-
-POST https://kodo-ecolo.herokuapp.com/v1/registration
-Content-Type: application/json
-
-{
-    "email": "abram123@gmail.com",
-    "password": "riothreitzqrq",
-    "firstName": "Pompo",
-    "lastName": "Abram",
-    "pseudo": "Brams123",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 21:47:18.582511+01"
-}
-
-
-### Route POST heroku /registration
-
-POST https://kodo-ecolo.herokuapp.com/v1/registration
-Content-Type: application/json
-
-{
-    "email": "elodie123@gmail.com",
-    "password": "fezifjieazoiei",
-    "firstName": "Muller",
-    "lastName": "Elodie",
-    "pseudo": "Elo123",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/"
-}
-
-
-### Route POST heroku /registration
-
-POST https://kodo-ecolo.herokuapp.com/v1/registration
-Content-Type: application/json
-
-{
-    "email": "matiuyo@gmail.com",
+    "email": "matiuyo345@gmail.com",
     "password": "fezifjieazefeeoiei",
     "firstName": "Mat",
     "lastName": "matthieu",
-    "pseudo": "Matre",
+    "pseudo": "Matre12",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-05 21:47:18.582511+01"
 }
-
-
-### Route POST api /registration
-
-POST http://localhost:3000/v1/registration
-Content-Type: application/json
-
-{
-    "email": "audray123@gmail.com",
-    "password": "ghuihguh",
-    "firstName": "Alexandre",
-    "lastName": "Audrey",
-    "pseudo": "Audy123",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-04 21:47:18.582511+01"
-}
-
-
-### Route POST api /registration
-
-POST http://localhost:3000/v1/registration
-Content-Type: application/json
-
-{
-    "email": "abram@gmail.com",
-    "password": "riothreitzqrq",
-    "firstName": "Pompo",
-    "lastName": "Abram",
-    "pseudo": "Brams",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 21:47:18.582511+01"
-}
-
-
-### Route POST api /registration
-
-POST http://localhost:3000/v1/registration
-Content-Type: application/json
-
-{
-    "email": "elodie@gmail.com",
-    "password": "fezifjieazoiei",
-    "firstName": "Muller",
-    "lastName": "Elodie",
-    "pseudo": "Elo",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 20:47:18.582511+01"
-}
-
-
-### Route POST api /registration
-
-POST http://localhost:3000/v1/registration
-Content-Type: application/json
-
-{
-    "email": "matiuyo@gmail.com",
-    "password": "fezifjieazefeeoiei",
-    "firstName": "Mat",
-    "lastName": "matthieu",
-    "pseudo": "Matre",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/"
-}
-
-
 
 ### Route POST heroku /login
 
 POST https://kodo-ecolo.herokuapp.com/v1/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTU5LCJlbWFpbCI6Im1hdGl1eW8zNDVAZ21haWwuY29tIiwicHNldWRvIjoiTWF0cmUxMiIsImRhdGUiOiIyMDIxLTAzLTA1VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU1MzcwMzJ9.jtvuSDmznh0EAYHR-cT2i-QYQaQESt3uNtkrJ9kHN-4
+
 Content-Type: application/json
 
 {
-    "email": "vfghdkg@gmail.com",
-    "password": "fdhbdjkjkdwrg"
+    "email": "matiuyo345@gmail.com",
+    "password": "fezifjieazefeeoiei"
+}
+
+
+### Route POST api /registration
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "audrey1234@gmail.com",
+    "password": "ghuihguh",
+    "firstName": "Alexandre",
+    "lastName": "Audrey",
+    "pseudo": "Audy1234",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-04 21:47:18.582511+01"
 }
 
 
@@ -162,8 +68,9 @@ POST http://localhost:3000/v1/login
 Content-Type: application/json
 
 {
-    "email": "elodie@gmail.com",
-    "password": "fezifjieazoiei"
+   
+    "email": "audrey1234@gmail.com",
+    "password": "ghuihguh"
 }
 
 
@@ -186,12 +93,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiO
 Content-Type: application/json
 
 {
-    "email": "echo1@vue.fr",
-    "password": "ecologie",
+    "email": "audrey1234@gmail.com",
+    "password": "ghuihguh",
     "firstName": "Alexandre",
-    "lastName": "Audrey",
-    "pseudo": "Audy26",
-    "img": "2.png"
+    "lastName": "Amélie",
+    "pseudo": "Audy1234",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-04 21:47:18.582511+01"
 }
 
 
