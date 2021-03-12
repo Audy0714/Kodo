@@ -35,7 +35,7 @@ const userMapper = {
 
             await db.query(`
             INSERT INTO "user" (email, password, first_name, last_name, pseudo, img, date)
-            VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING id;`, [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img, theUser.date]);
+            VALUES($1, $2, $3, $4, $5, $6, $7) WHERE email IN ($1) AND pseudo IN($5) RETURNING id;`, [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img, theUser.date]);
 
         } catch (error) {
 

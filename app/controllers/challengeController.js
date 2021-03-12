@@ -17,20 +17,6 @@ const challengeController = {
      */
     findOne: async (request, response) => {
 
-        /*try {
-            const user = await userMapper.save(user.date);
-            
-            request.session.user = [];
-
-            response.json(user);
-
-        } catch (error) {
-
-            response.status(404).json(error.message);
-
-        }*/
-
-
         const { id } = request.params;
 
         const challenge = await challengeMapper.oneChallenge(id);

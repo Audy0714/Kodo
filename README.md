@@ -1,6 +1,6 @@
 ## Project
 
-La transition écologique
+La transition écologique kodo-ecolo
 
 ## Stack
 
@@ -9,6 +9,7 @@ La transition écologique
 - Express
 - pg
 - cors
+- jwt (token)
 - PostgreSQL 11+
 - Sqitch
 - dataMapper
@@ -24,8 +25,8 @@ sqitch deploy
 sqitch revert db:pg:kodo-ecolo
 sqitch verify db:pg:kodo-ecolo
 
-npm start for node index.js
-npm test for TU
+npm start for nodemon index.js
+(npm test for TU)
 
 
 ### Deployment method

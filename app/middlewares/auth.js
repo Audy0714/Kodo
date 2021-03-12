@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 function auth(req, res, next) {
-
+// je le reçois du coé front)
   const authHeader = req.headers.authorization;
 
   const token = authHeader && authHeader.split(' ')[1];

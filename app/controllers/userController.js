@@ -102,6 +102,7 @@ const userController = {
                 'pseudo',
                 'date'
             ]);
+
             const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
 
             newUser.token = token;
@@ -111,6 +112,7 @@ const userController = {
             console.log(validPassword);
 
         } catch (error) {
+
             response.status(403).json(error.message);
         }
     },
@@ -122,6 +124,7 @@ const userController = {
      * @param  { Express.Response } response - response.json(theUser)
      */
     modifyUser: async (request, response) => {
+
         try {
             const { id } = request.params;
             

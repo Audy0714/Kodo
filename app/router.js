@@ -79,7 +79,7 @@ router.post('/registration', validateBody(userSchema), userController.signupActi
  * @group User - management of the collection of user
  * @return { JSON } - the user connected
  */
-router.post('/login', userController.loginAction);
+router.post('/login', auth, userController.loginAction);
 
 /**
 *  @route POST /questions/:id
