@@ -4,3 +4,5 @@ require('./schemas');
 
 require('./models');
 
+require('./mappers');
+

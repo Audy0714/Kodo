@@ -1,4 +1,4 @@
-// UNIT TESTING USER
+// UNIT TESTING USER MODELS
 
 require('dotenv').config();
 
@@ -15,7 +15,7 @@ describe('User Model', function() {
             password: "kopuyjiuy",
             firstName: "Martines",
             lastName: "Sanchez",
-            pseudo: "Mat5",
+            pseudo: "Mat6",
             img: "https://fherughre/"
         };
     });
@@ -25,11 +25,5 @@ describe('User Model', function() {
 
         expect(theUser).to.have.property('email').to.equal('hgugfuh2@gmail.com');
     });
-});
 
-// UNIT TESTING ARTICLE
-//const Article = require('../app/models/article');
-// UNIT TESTING QUESTION
-//const Question = require('../app/models/question');
-// UNIT TESTING CHALLENGE
-//const Challenge = require('../app/models/challenge');
+});
