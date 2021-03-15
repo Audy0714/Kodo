@@ -82,7 +82,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpb
 
 ### Route GET api /questions/:id (user 178)
 
-GET http://localhost:3000/v1/questions/6
+GET http://localhost:3000/v1/questions/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
 
 

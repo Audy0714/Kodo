@@ -12,7 +12,7 @@ const questionMapper = {
     oneQuestion: async (id) => {
         const { rows } = await db.query(`
         SELECT question.id,  question.statement, description, answer.level_id FROM answer
-        JOIN question ON answer.question_id = question_id
+        JOIN question ON answer.question_id = question.id
         JOIN "level" ON answer.level_id = "level".id
         WHERE question.id = $1;`, [id]);
 
