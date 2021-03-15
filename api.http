@@ -52,11 +52,11 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audrey@gmail.com",
+    "email": "audreyb@gmail.com",
     "password": "ghuihguh",
     "firstName": "Alexandre",
     "lastName": "Audrey",
-    "pseudo": "Audya",
+    "pseudo": "Audyb",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-04 21:47:18.582511+01"
 }
@@ -64,12 +64,13 @@ Content-Type: application/json
 
 ### Route POST api /login (user 178)
 POST http://localhost:3000/v1/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgwLCJlbWFpbCI6ImF1ZHJleWJAZ21haWwuY29tIiwicHNldWRvIjoiQXVkeWIiLCJkYXRlIjoiMjAyMS0wMy0wNFQyMDo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODA0NzI1fQ.lvcPOo6uG1BkyzmGtbDiwZKpYWcrLJ69bdzmhHlpUHY
+
 Content-Type: application/json
 
 {
    
-    "email": "audrey@gmail.com",
+    "email": "audreyb@gmail.com",
     "password": "ghuihguh"
 }
 

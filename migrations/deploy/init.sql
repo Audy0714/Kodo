@@ -1,4 +1,4 @@
--- Deploy kodo-ecolo:init to pg
+-- Deploy kodo-ecologie:init to pg
 
 BEGIN;
 
@@ -10,17 +10,18 @@ CREATE TABLE "level" (
     "name" text NOT NULL 
 );
 
+CREATE TABLE question (
+    id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    "statement" text NOT NULL
+);
+
 CREATE TABLE answer (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "description" text NOT NULL,
-    level_id posint REFERENCES "level"(id)
+    level_id posint REFERENCES "level"(id),
+    question_id posint  REFERENCES question(id)
 );
 
-CREATE TABLE question (
-    id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "statement" text NOT NULL,
-    answer_id posint REFERENCES answer(id)
-);
 
 CREATE TABLE challenge (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
