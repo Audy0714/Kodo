@@ -46,29 +46,30 @@ Content-Type: application/json
 }
 
 
-### Route POST api /registration (profil 160)
+### Route POST api /registration (profil 178)
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audrey1234@gmail.com",
+    "email": "audrey@gmail.com",
     "password": "ghuihguh",
     "firstName": "Alexandre",
     "lastName": "Audrey",
-    "pseudo": "Audy1234",
+    "pseudo": "Audya",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-04 21:47:18.582511+01"
 }
 
 
-### Route POST api /login
-
+### Route POST api /login (user 178)
+POST http://localhost:3000/v1/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
 Content-Type: application/json
 
 {
    
-    "email": "audrey1234@gmail.com",
+    "email": "audrey@gmail.com",
     "password": "ghuihguh"
 }
 
@@ -79,10 +80,10 @@ GET https://kodo-ecolo.herokuapp.com/v1/questions/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
 
 
-### Route GET api /questions/:id (user 160)
+### Route GET api /questions/:id (user 178)
 
-GET http://localhost:3000/v1/questions/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
+GET http://localhost:3000/v1/questions/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
 
 
 ### Route POST heroku /questions/:id (user 163)

@@ -3,3 +3,5 @@
 
 init 2021-03-03T08:25:55Z Audrey Alexandre <audykei7907@gmail.com> # create tables
 insert 2021-03-03T08:50:51Z Audrey Alexandre <audykei7907@gmail.com> # data insertion
+column 2021-03-15T08:21:28Z Audrey Alexandre <audykei7907@gmail.com> # create column question_id in answer
+values 2021-03-15T08:24:26Z Audrey Alexandre <audykei7907@gmail.com> # insert values question_id on answer
