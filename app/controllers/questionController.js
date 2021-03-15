@@ -70,7 +70,7 @@ const questionController = {
             // le timestamps du moment
             const setDate = Math.round(Date.now());
         
-             response.json({ user, answers, level, setDate });
+             response.json({ user, question, answers, level, setDate });
             
         } catch (error) {
             response.status(403).json(error.message);
