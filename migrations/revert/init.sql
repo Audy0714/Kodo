@@ -1,8 +1,8 @@
--- Revert kodo-ecolo:init from pg
+-- Revert kodo-ecologie:init from pg
 
 BEGIN;
 
-DROP TABLE "user", article, challenge, question, answer, "level";
+DROP TABLE "user", article, challenge, answer, question, "level";
 
 DROP DOMAIN posint;
 

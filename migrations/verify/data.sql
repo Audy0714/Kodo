@@ -1,4 +1,4 @@
--- Verify kodo-ecologie:init on pg
+-- Verify kodo-ecologie:data on pg
 
 BEGIN;
 
