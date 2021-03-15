@@ -1,7 +1,5 @@
 %syntax-version=1.0.0
-%project=kodo-ecolo
+%project=kodo-ecologie
 
-init 2021-03-03T08:25:55Z Audrey Alexandre <audykei7907@gmail.com> # create tables
-insert 2021-03-03T08:50:51Z Audrey Alexandre <audykei7907@gmail.com> # data insertion
-column 2021-03-15T08:21:28Z Audrey Alexandre <audykei7907@gmail.com> # create column question_id in answer
-values 2021-03-15T08:24:26Z Audrey Alexandre <audykei7907@gmail.com> # insert values question_id on answer
+init 2021-03-15T14:09:12Z Audrey Alexandre <audykei7907@gmail.com> # création des tables
+data 2021-03-15T14:17:54Z Audrey Alexandre <audykei7907@gmail.com> # insertion des data

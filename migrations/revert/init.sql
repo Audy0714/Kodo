@@ -1,4 +1,4 @@
--- Revert kodo-ecolo:init from pg
+-- Revert kodo-ecologie:init from pg
 
 BEGIN;
 
