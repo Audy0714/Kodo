@@ -14,10 +14,11 @@ const questionMapper = {
         SELECT question.id, "statement", answer.description, answer.level_id, answer.question_id
         FROM question JOIN answer ON question.id = answer.question_id
 		JOIN "level" ON answer.level_id = "level".id
-        WHERE question.id =  $1
+        WHERE question.id = $1
 		ORDER BY description;`, [id]);
 
-        return new Question(rows[0]);
+        return rows.map(row => new Question(row));
+
     }
 };
 
