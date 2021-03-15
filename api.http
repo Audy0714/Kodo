@@ -105,13 +105,14 @@ Content-Type: application/json
 ### Route POST api/questions/:id (user 160)
 
 POST http://localhost:3000/v1/questions/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
 
 Content-Type: application/json
 
 {
     "statement": "Q2 Qu''y a t-il dans votre dressing ?",
-    "answer_id": 5
+    "answer_id": 5,
+    "question_id": 2
 }
 
 
@@ -121,7 +122,7 @@ GET https://kodo-ecolo.herokuapp.com/v1/challenges
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
 
 
-### Route GET api /challenges (user 160)
+### Route GET api /challenges (user 178)
 
 GET http://localhost:3000/v1/challenges
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
@@ -133,10 +134,10 @@ GET https://kodo-ecolo.herokuapp.com/v1/challenges/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
 
 
-### Route GET api /challenges/:id (user 160)
+### Route GET api /challenges/:id (user 178)
 
 GET http://localhost:3000/v1/challenges/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
 
 
 

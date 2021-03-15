@@ -14,8 +14,6 @@ const port = process.env.PORT || 5478;
 
 const router = require('./app/router');
 
-app.use(cors());
-
 
 // mise en place et configuration de la session
 app.use(session({
@@ -38,6 +36,8 @@ app.use((req, res, next) => {
 
     next();
 });
+
+app.use(cors());
 
 // le parser JSON qui récupère le payload quand il y en a un et le transforme en objet JS disponible sous request.body
 app.use(express.json());
