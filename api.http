@@ -1,49 +1,12 @@
 
-### Route GET heroku /articles
-
-GET https://kodo-ecolo.herokuapp.com/v1/articles
-
 ### Route GET api /articles
 
 GET http://localhost:3000/v1/articles
 
 
-### Route GET heroku /articles/{id}
-
-GET https://kodo-ecolo.herokuapp.com/v1/articles/10
-
-
 ### Route GET api /articles/{id}
 
 GET http://localhost:3000/v1/articles/1
-
-
-### Route POST heroku /registration (profil 163)
-
-POST https://kodo-ecolo.herokuapp.com/v1/registration
-Content-Type: application/json
-
-{
-    "email": "matiuyo345@gmail.com",
-    "password": "fezifjieazefeeoiei",
-    "firstName": "Mat",
-    "lastName": "matthieu",
-    "pseudo": "Matre12",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-05 21:47:18.582511+01"
-}
-
-### Route POST heroku /login
-
-POST https://kodo-ecolo.herokuapp.com/v1/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTU5LCJlbWFpbCI6Im1hdGl1eW8zNDVAZ21haWwuY29tIiwicHNldWRvIjoiTWF0cmUxMiIsImRhdGUiOiIyMDIxLTAzLTA1VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU1MzcwMzJ9.jtvuSDmznh0EAYHR-cT2i-QYQaQESt3uNtkrJ9kHN-4
-
-Content-Type: application/json
-
-{
-    "email": "matiuyo345@gmail.com",
-    "password": "fezifjieazefeeoiei"
-}
 
 
 ### Route POST api /registration (profil 178)
@@ -52,61 +15,39 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "audreyb@gmail.com",
-    "password": "ghuihguh",
-    "firstName": "Alexandre",
-    "lastName": "Audrey",
-    "pseudo": "Audyb",
+    "email": "test1@gmail.com",
+    "password": "untest",
+    "firstName": "Test1",
+    "lastName": "Test1",
+    "pseudo": "Teste1",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-04 21:47:18.582511+01"
+    "date": "2021-03-16 10:47:18.582511+01"
 }
 
 
-### Route POST api /login (user 178)
+### Route POST api /login (user 6)
 POST http://localhost:3000/v1/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgwLCJlbWFpbCI6ImF1ZHJleWJAZ21haWwuY29tIiwicHNldWRvIjoiQXVkeWIiLCJkYXRlIjoiMjAyMS0wMy0wNFQyMDo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODA0NzI1fQ.lvcPOo6uG1BkyzmGtbDiwZKpYWcrLJ69bdzmhHlpUHY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 Content-Type: application/json
 
 {
    
-    "email": "audreyb@gmail.com",
-    "password": "ghuihguh"
+   "email": "test1@gmail.com",
+   "password": "untest"
 }
 
 
-### Route GET heroku /questions/:id (user 163)
-
-GET https://kodo-ecolo.herokuapp.com/v1/questions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
-
-
-### Route GET api /questions/:id (user 178)
+### Route GET api /questions/:id (user 6)
 
 GET http://localhost:3000/v1/questions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 
-### Route POST heroku /questions/:id (user 163)
-POST https://kodo-ecolo.herokuapp.com/v1/questions/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
-
-Content-Type: application/json
-
-{
-    "email": "audrey1234@gmail.com",
-    "password": "ghuihguh",
-    "firstName": "Alexandre",
-    "lastName": "Amélie",
-    "pseudo": "Audy1234",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-04 21:47:18.582511+01"
-}
-
-### Route POST api/questions/:id (user 160)
+### Route POST api/questions/:id (user 6)
 
 POST http://localhost:3000/v1/questions/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 Content-Type: application/json
 
@@ -117,28 +58,30 @@ Content-Type: application/json
 }
 
 
-### Route GET heroku /challenges (user 163)
-
-GET https://kodo-ecolo.herokuapp.com/v1/challenges
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
-
-
-### Route GET api /challenges (user 178)
+### Route GET api /challenges (user 6)
 
 GET http://localhost:3000/v1/challenges
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtYXRpdXlvQGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlIiwiaWF0IjoxNjE1NDU4ODU3fQ.IjAaiczfKlPVRLe80RkQ-4ML859eqRH59xLavbA2rYo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 
-### Route GET heroku /challenges/:id (user 163)
-
-GET https://kodo-ecolo.herokuapp.com/v1/challenges/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbWFpbCI6Im1hdGl1eW8yNDU2QGdtYWlsLmNvbSIsInBzZXVkbyI6Ik1hdHJlMjI2IiwiZGF0ZSI6IjIwMjEtMDMtMDVUMjA6NDc6MTguNTgyWiIsImlhdCI6MTYxNTUzODMyOH0.JYR1r-L5_OYq0mMD6Gj4HyyiynCSMhKm-yCJBre-jOQ
-
-
-### Route GET api /challenges/:id (user 178)
+### Route GET api /challenges/:id (user 6)
 
 GET http://localhost:3000/v1/challenges/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4LCJlbWFpbCI6ImF1ZHJleUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJBdWR5YSIsImRhdGUiOiIyMDIxLTAzLTA0VDIwOjQ3OjE4LjU4MloiLCJpYXQiOjE2MTU3OTYwNDR9.CVqlnHZQnn0DQTbcmf3Rjf0Opgri8_eJLY89T8kpneo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 
+### Route PATCH api /settings/profil/:id (user 6)
+PATCH http://localhost:3000/v1/settings/profil/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "untest",
+    "firstName": "Test1",
+    "lastName": "Modif",
+    "pseudo": "Modif1",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-16 10:47:18.582511+01"
+}

@@ -125,7 +125,7 @@ const userController = {
      */
     modifyUser: async (request, response) => {
 
-        try {
+         try {
             const { id } = request.params;
             
             const user = await userMapper.oneUser(id);
@@ -136,18 +136,17 @@ const userController = {
 
             } else {
                
-                console.log(request.body);
                 const theUser = new User(request.body);
-
+                
                 await userMapper.updateUser(theUser);
+               
+                response.json({ user, theUser });
 
-                response.json(theUser);
             }
 
         } catch (error) {
             response.status(403).json(error.message);
         }
-       
     }
     
 };

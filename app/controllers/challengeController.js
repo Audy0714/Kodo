@@ -1,12 +1,8 @@
 const { request } = require('express');
 
-const User = require('../models/user');
-
 const Challenge = require('../models/challenge');
 
 const challengeMapper = require('../models/challengeMapper');
-
-const userMapper = require('../models/userMapper');
 
 const challengeController = {
      /**

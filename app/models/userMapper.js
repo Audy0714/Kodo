@@ -79,8 +79,9 @@ const userMapper = {
                 AND pseudo = $5;`,
         [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
         );
-
-        return new User(rows[0]);
+        //return theUser;
+        //return rows.map(row => new User(row));
+        //return new User(rows[0]);
     },
 
     setDate: async (id) => {

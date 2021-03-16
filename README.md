@@ -18,17 +18,17 @@ La transition écologique kodo-ecolo
 ## configuration
 
 npm init -y
-sqitch init kodo-ecolo --engine pg
+sqitch init kodo-ecologie --engine pg
 sqitch config --user engine.pg.client psql
-createdb kodo-ecolo
+createdb kodo-ecologie
 sqitch deploy
-sqitch revert db:pg:kodo-ecolo
-sqitch verify db:pg:kodo-ecolo
+sqitch revert db:pg:kodo-ecologie
+sqitch verify db:pg:kodo-ecologie
 
 npm start for node index.js
-(npm test for TU)
+npm test for TU
 
 
 ### Deployment method
 
-https://kodo-ecolo.herokuapp.com/v1
+https://kodo-ecologie.herokuapp.com/v1
