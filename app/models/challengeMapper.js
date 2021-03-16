@@ -10,7 +10,9 @@ const challengeMapper = {
      * @return { Promise } the promise of all found challenges
      */
     allChallenges: async () => {
-        const result = await db.query('SELECT * FROM challenge');
+        const result = await db.query(`
+            SELECT "day", challenge.description, article.title, article.slug, article.description, article.story, article.how, article.why FROM challenge 
+            JOIN article ON challenge.id = article.challenge_id;`);
 
          return result.rows.map(challenge => new Challenge(challenge));
     },
@@ -22,7 +24,10 @@ const challengeMapper = {
      */
     oneChallenge: async (id) => {
 
-        const { rows } = await db.query('SELECT * FROM challenge WHERE id = $1;', [id]);
+        const { rows } = await db.query(`
+            SELECT "day", challenge.description, article.title, article.slug, article.description, article.story, article.how, article.why FROM challenge 
+            JOIN article ON challenge.id = article.challenge_id 
+            WHERE challenge.id = $1;`, [id]);
 
         return new Challenge(rows[0]);
     }
