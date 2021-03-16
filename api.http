@@ -9,7 +9,7 @@ GET http://localhost:3000/v1/articles
 GET http://localhost:3000/v1/articles/1
 
 
-### Route POST api /registration (profil 178)
+### Route POST api /registration (profil 6)
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
@@ -82,6 +82,53 @@ Content-Type: application/json
     "firstName": "Test1",
     "lastName": "Modif",
     "pseudo": "Modif1",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-16 10:47:18.582511+01"
+}
+
+
+## 2ème user
+
+### Route POST api /registration (profil 6)
+
+POST http://localhost:3000/v1/registration
+Content-Type: application/json
+
+{
+    "email": "test2@gmail.com",
+    "password": "testdeux",
+    "firstName": "Test2",
+    "lastName": "Test2",
+    "pseudo": "Teste2",
+    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
+    "date": "2021-03-16 10:47:18.582511+01"
+}
+
+### Route POST api /login (user 8)
+POST http://localhost:3000/v1/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJ0ZXN0MkBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTIiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODk4NzE3fQ.lQuNZf1ya23IaNst4KjHZrTpn2vmAFvmXwc5dBKjHMU
+
+Content-Type: application/json
+
+{
+   
+   "email": "test2@gmail.com",
+    "password": "testdeux"
+}
+
+
+### Route PATCH api /settings/profil/:id (user 8)
+PATCH http://localhost:3000/v1/settings/profil/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJ0ZXN0MkBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTIiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODk4NzE3fQ.lQuNZf1ya23IaNst4KjHZrTpn2vmAFvmXwc5dBKjHMU
+
+Content-Type: application/json
+
+{
+    "email": "test2@gmail.com",
+    "password": "testdeux",
+    "firstName": "Test2modify",
+    "lastName": "Test2modify",
+    "pseudo": "Teste2",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-16 10:47:18.582511+01"
 }

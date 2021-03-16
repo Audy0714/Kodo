@@ -66,8 +66,9 @@ const userMapper = {
      * @param { String } img - the img of the user
      * @return { Promise } the promise of modify data user
      */
-    updateUser: async (theUser) => {
-        const { rows } = await db.query(`
+    updateUser: async () => {
+        const { rows } = await db.query(
+            `
             UPDATE "user" 
                 SET email = $1,
                     password = $2,
@@ -77,7 +78,7 @@ const userMapper = {
                     img = $6
                 WHERE email = $1
                 AND pseudo = $5;`,
-        [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
+        [this.email, this.password, this.firstName, this.lastName, this.pseudo, this.img]
         );
         //return theUser;
         //return rows.map(row => new User(row));

@@ -22,7 +22,7 @@ app.use(session({
     secret: 'odok',
     cookie: {
         secure: false,
-        maxAge: 60 * 60 * 1000 // une heure
+        maxAge: 60 * 60 * 10000 // une heure
     }
 }));
 

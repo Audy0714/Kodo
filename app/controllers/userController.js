@@ -128,7 +128,9 @@ const userController = {
          try {
             const { id } = request.params;
             
-            const user = await userMapper.oneUser(id);
+            const data  = request.body;
+
+            let user = await userMapper.oneUser(id);
 
              // if the user not exists
             if (!user) {
@@ -136,12 +138,11 @@ const userController = {
 
             } else {
                
-                const theUser = new User(request.body);
+               const theUser = new User(data);
                 
-                await userMapper.updateUser(theUser);
-               
-                response.json({ user, theUser });
+               await userMapper.updateUser(theUser);
 
+                response.status(200).json({user, theUser});
             }
 
         } catch (error) {
