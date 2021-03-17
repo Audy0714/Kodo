@@ -9,125 +9,81 @@ GET http://localhost:3000/v1/articles
 GET http://localhost:3000/v1/articles/1
 
 
-### Route GET /profil/:id (profil 6)
-GET  http://localhost:3000/v1/profil/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+### Route GET /profil/:id (profil Abram id4)
+GET  http://localhost:3000/v1/profil/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 
 
-### Route POST api /registration (profil 6)
+### Route POST api /registration (profil Abram id4)
 
 POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "test3@gmail.com",
-    "password": "untest",
-    "firstName": "Test3",
-    "lastName": "Test3",
-    "pseudo": "Teste3",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-16 10:47:18.582511+01"
+    "email": "azerty@gmail.com",
+    "password": "oklm",
+    "firstName": "Abram",
+    "lastName": "Pomposelli",
+    "pseudo": "Brams75",
+    "img": "https://images.pexels.com/photos/4107282/pexels-photo-41072"
 }
 
 
-### Route POST api /login (user abram)
+### Route POST api /login (user abram id4)
 POST http://localhost:3000/v1/login
 Content-Type: application/json
 
 {
    
-    "email": "azerty@gmail.com",
+    "email": "azertyy@gmail.com",
     "password": "oklm"
 }
 
 
-### Route GET api /questions/:id (user 6)
+### Route GET api /questions/:id (user Abram id4)
 
 GET http://localhost:3000/v1/questions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 
 
-### Route POST api/questions/:id (user 6)
+### Route POST api/questions/:id (user Abram id4)
 
-POST http://localhost:3000/v1/questions/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+POST http://localhost:3000/v1/questions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 Content-Type: application/json
 
 {
-    "level_id": 2
+    "level_id": 3
 }
 
 
-### Route GET api /challenges (user 6)
+### Route GET api /challenges (user Abram id4)
 
 GET http://localhost:3000/v1/challenges
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 
 
-### Route GET api /challenges/:id (user 6)
+### Route GET api /challenges/:id (user Abram id4)
 
 GET http://localhost:3000/v1/challenges/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 
 
-### Route PATCH api /settings/profil/:id (user 18)
-PATCH http://localhost:3000/v1/settings/profil/18
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwicHNldWRvIjoiVGVzdGUzIiwiZGF0ZSI6IjIwMjEtMDMtMTZUMDk6NDc6MTguNTgyWiIsImlhdCI6MTYxNTk4NzE0NX0.msGMtIZzHcff6tfvSPHl-fSqRaTOsaZOx-u3nKh9siI
+### Route PATCH api /settings/profil/:id (user Abram id4)
+
+PATCH http://localhost:3000/v1/settings/profil/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhemVydHlAZ21haWwuY29tIiwicHNldWRvIjoiQnJhbXM3NSIsImludGVydmFsX2RhdGUiOnsibWludXRlcyI6Mywic2Vjb25kcyI6NDIsIm1pbGxpc2Vjb25kcyI6Mjk3LjkyNH0sImxldmVsX2lkIjozLCJpbWciOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy80MTA3MjgyL3BleGVscy1waG90by00MTA3MjgyLmpwZWc_YXV0bz1jb21wcmVzcyZjcz10aW55c3JnYiZkcHI9MiZoPTc1MCZ3PTEyNjAiLCJmaXJzdE5hbWUiOiJBYnJhbSIsImxhc3ROYW1lIjoiUG9tcG9zZWxsaSIsImlhdCI6MTYxNTk5MDQ1M30.7hRAx5UdRxc-0-3VWQHx5Pjc2TsFjlhIHnH39gjynnU
 Content-Type: application/json
 
 {
-    "email": "test3@gmail.com",
-    "password": "untest",
-    "firstName": "Test3",
-    "lastName": "Modif",
-    "pseudo": "Modif1",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-16 10:47:18.582511+01"
+    "email": "azerty@gmail.com",
+    "password": "oklm",
+    "firstName": "Abramss",
+    "lastName": "Pomposelli",
+    "pseudo": "Brams75",
+    "img": "https://images.pexels.com/photos/4107282/pexels-photo-41072"
 }
 
 
-## 2ème user
-
-### Route POST api /registration (profil 6)
-
-POST http://localhost:3000/v1/registration
-Content-Type: application/json
-
-{
-    "email": "test2@gmail.com",
-    "password": "testdeux",
-    "firstName": "Test2",
-    "lastName": "Test2",
-    "pseudo": "Teste2",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-16 10:47:18.582511+01"
-}
-
-### Route POST api /login (user 8)
-POST http://localhost:3000/v1/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJ0ZXN0MkBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTIiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODk4NzE3fQ.lQuNZf1ya23IaNst4KjHZrTpn2vmAFvmXwc5dBKjHMU
-
-Content-Type: application/json
-
-{
-   
-   "email": "test2@gmail.com",
-    "password": "testdeux"
-}
 
 
-### Route PATCH api /settings/profil/:id (user 8)
-PATCH http://localhost:3000/v1/settings/profil/8
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJ0ZXN0MkBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTIiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODk4NzE3fQ.lQuNZf1ya23IaNst4KjHZrTpn2vmAFvmXwc5dBKjHMU
-
-Content-Type: application/json
-
-{
-    "email": "test2@gmail.com",
-    "password": "testdeux",
-    "firstName": "Test2modify",
-    "lastName": "Test2modify",
-    "pseudo": "Teste2",
-    "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
-    "date": "2021-03-16 10:47:18.582511+01"
-}
