@@ -119,7 +119,7 @@ const userController = {
 
     /**
      * @async   
-     * @function modifyUsern - modify data user
+     * @function modifyUser - modify data user
      * @param  { Express.Request } request - userMapper.oneUser(id)
      * @param  { Express.Response } response - response.json(theUser)
      */

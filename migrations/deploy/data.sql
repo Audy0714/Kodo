@@ -224,5 +224,4 @@ BEGIN;
         ('props@vue.fr', 'ecologie', 'Vaisselle', 'Aude', 'mrprops', '2.png', '2021-02-02 21:47:18.582511+01', 3, 20, 20, 3);
 
 
-
     COMMIT;
