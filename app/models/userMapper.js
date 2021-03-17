@@ -49,7 +49,7 @@ const userMapper = {
      * @return { Promise } the promise of a found user
      */
     findByEmail: async (email) => {
-        const { rows } = await db.query(`SELECT * FROM "user" WHERE email = $1;`, [email]);
+        const { rows } = await db.query(`SELECT *, 	NOW()-date AS interval_date FROM "user" WHERE email = $1;`, [email]);
 
         return new User(rows[0]);
     },
@@ -66,7 +66,7 @@ const userMapper = {
      * @return { Promise } the promise of modify data user
      */
     updateUser: async (theUser) => {
-      
+        const {id, email, password, firstName, lastName, pseudo, img} = theUser;
         const { rows } = await db.query(
             `
             UPDATE "user" 
@@ -76,13 +76,11 @@ const userMapper = {
                     last_name = $4,
                     pseudo = $5,
                     img = $6
-                WHERE email = $1
-                AND pseudo = $5;`,
-        [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
+                WHERE id = $7 RETURNING *`,
+        [email, password, firstName, lastName, pseudo, img, id]
         );
-        //return theUser;
-        return rows.map(row => new User(row));
-        //return new User(rows[0]);
+        return new User(rows[0]);
+       
     },
 
     setLevel: async (user) => {

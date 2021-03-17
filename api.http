@@ -20,26 +20,24 @@ POST http://localhost:3000/v1/registration
 Content-Type: application/json
 
 {
-    "email": "test1@gmail.com",
+    "email": "test3@gmail.com",
     "password": "untest",
-    "firstName": "Test1",
-    "lastName": "Test1",
-    "pseudo": "Teste1",
+    "firstName": "Test3",
+    "lastName": "Test3",
+    "pseudo": "Teste3",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
     "date": "2021-03-16 10:47:18.582511+01"
 }
 
 
-### Route POST api /login (user 6)
+### Route POST api /login (user 18)
 POST http://localhost:3000/v1/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
-
 Content-Type: application/json
 
 {
    
-   "email": "test1@gmail.com",
-   "password": "untest"
+  "email": "test3@gmail.com",
+"password": "untest"
 }
 
 
@@ -72,16 +70,15 @@ GET http://localhost:3000/v1/challenges/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
 
 
-### Route PATCH api /settings/profil/:id (user 6)
-PATCH http://localhost:3000/v1/settings/profil/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
-
+### Route PATCH api /settings/profil/:id (user 18)
+PATCH http://localhost:3000/v1/settings/profil/18
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwicHNldWRvIjoiVGVzdGUzIiwiZGF0ZSI6IjIwMjEtMDMtMTZUMDk6NDc6MTguNTgyWiIsImlhdCI6MTYxNTk4NzE0NX0.msGMtIZzHcff6tfvSPHl-fSqRaTOsaZOx-u3nKh9siI
 Content-Type: application/json
 
 {
-    "email": "test1@gmail.com",
+    "email": "test3@gmail.com",
     "password": "untest",
-    "firstName": "Test1",
+    "firstName": "Test3",
     "lastName": "Modif",
     "pseudo": "Modif1",
     "img": "https://www.pexels.com/fr-fr/photo/bouteilles-en-verre-dans-un-sac-3735218/",
