@@ -24,12 +24,9 @@ const questionController = {
     /**
      * @async
      * @function handleQuestionForm - user answers questions
-     * @param  { Express.Request } request - questionMapper.oneQuestion(id)
-     * @param  { Express.Request } request - user responses
-     * @param  { Express.Request } request - user level
-     * @param  { Express.Response } response - response.json(question)
-     * @param  { Express.Response } response - response.json(answers)
-     * @param  { Express.Response } response - response.json(level)
+     * @param  { Express.Request } request -userMapper.oneUser(user.id)
+     * @param  { Express.Request } request - userMapper.setLevel(body)
+     * @param  { Express.Response } response - response.json(user)
      */
     handleQuestionForm: async (request, response) => {
     

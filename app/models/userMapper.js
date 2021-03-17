@@ -12,7 +12,7 @@ const userMapper = {
      */
     oneUser: async (id) => {
 
-        const { rows } = await db.query('SELECT * FROM "user" WHERE id = $1;', [id]);
+        const { rows } = await db.query('SELECT *, 	NOW()-date AS interval_date FROM "user" WHERE id = $1;', [id]);
         return new User(rows[0]);
     },
 
@@ -66,6 +66,7 @@ const userMapper = {
      * @return { Promise } the promise of modify data user
      */
     updateUser: async (theUser) => {
+      
         const { rows } = await db.query(
             `
             UPDATE "user" 
