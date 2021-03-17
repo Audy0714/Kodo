@@ -89,7 +89,7 @@ router.post('/login', userController.loginAction);
  * @param { Number } - user level
  * @return { JSON } - the user responses with level_id
  */
-router.post('/questions/:id(\\d+)', auth, questionController.handleQuestionForm);
+router.post('/questions', auth, questionController.handleQuestionForm);
 
 /**
  * @route PATCH /settings/profil/:id
