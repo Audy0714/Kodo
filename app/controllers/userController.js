@@ -79,10 +79,8 @@ const userController = {
         
           try {
             const userEmail = request.body.email;
-            console.log(userEmail);
 
             const theUser = await userMapper.findByEmail(userEmail);
-
             // if user not exists
             if (!theUser) {
                 return response.status(400).json('Invalid email or password');
@@ -100,7 +98,11 @@ const userController = {
                 'id',
                 'email',
                 'pseudo',
-                'date'
+                'interval_date',
+                'level_id',
+                'img',
+                'firstName',
+                'lastName'
             ]);
 
             const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
