@@ -1,16 +1,14 @@
 // Question Models
-
 class Question {
-    id;
-    statement;
-    level_id;
+	id;
+	statement;
 
-     // mise en place d'un constructeur
-    constructor(data) {
-        for (const prop in data) {
-            this[prop] = data[prop];
-        }
-    }
+	// mise en place d'un constructeur
+	constructor(data) {
+		for (const prop in data) {
+			this[prop] = data[prop];
+		}
+	}
 }
 
 module.exports = Question;

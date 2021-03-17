@@ -13,7 +13,6 @@ const userMapper = {
     oneUser: async (id) => {
 
         const { rows } = await db.query('SELECT * FROM "user" WHERE id = $1;', [id]);
-
         return new User(rows[0]);
     },
 
@@ -66,7 +65,7 @@ const userMapper = {
      * @param { String } img - the img of the user
      * @return { Promise } the promise of modify data user
      */
-    updateUser: async () => {
+    updateUser: async (theUser) => {
         const { rows } = await db.query(
             `
             UPDATE "user" 
@@ -78,16 +77,16 @@ const userMapper = {
                     img = $6
                 WHERE email = $1
                 AND pseudo = $5;`,
-        [this.email, this.password, this.firstName, this.lastName, this.pseudo, this.img]
+        [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]
         );
         //return theUser;
-        //return rows.map(row => new User(row));
+        return rows.map(row => new User(row));
         //return new User(rows[0]);
     },
 
-    setDate: async (id) => {
-
-        const { rows } = await db.query('SELECT date FROM "user" WHERE id = $1;', [id]);
+    setLevel: async (user) => {
+        const {id, level_id} = user;
+        const { rows } = await db.query('UPDATE "user" SET level_id = $1, date = NOW()::timestamp with time zone WHERE id = $2', [level_id, id]);
 
         return new User(rows[0]);
     }

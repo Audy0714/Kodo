@@ -124,8 +124,31 @@ const userController = {
      * @param  { Express.Response } response - response.json(theUser)
      */
     modifyUser: async (request, response) => {
+        const { id } = request.params;
+        const userData = request.body;    
+        let user = await userMapper.oneUser(id);
+        console.log(user);
+         // if the user not exists
+            if (!user) {
+                response.status(400).json(`The user don't exist with id ${id}`);
 
-         try {
+            } else {
+                const theUser = new User(userData);
+            console.log(user, theUser);
+            }
+            
+        try {
+
+            await userMapper.updateUser();
+            response.status(200).json({user, theUser});
+            //response.json(theUser);
+            console.log("The user was well modify");
+
+        } catch (error) {
+            response.status(403).json(error.message);
+        }
+
+         /*try {
             const { id } = request.params;
             
             const data  = request.body;
@@ -142,12 +165,12 @@ const userController = {
                 
                await userMapper.updateUser(theUser);
 
-                response.status(200).json({user, theUser});
+               
             }
 
         } catch (error) {
             response.status(403).json(error.message);
-        }
+        }*/
     }
     
 };

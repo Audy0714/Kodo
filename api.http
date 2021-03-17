@@ -9,6 +9,11 @@ GET http://localhost:3000/v1/articles
 GET http://localhost:3000/v1/articles/1
 
 
+### Route GET /profil/:id (profil 6)
+GET  http://localhost:3000/v1/profil/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
+
+
 ### Route POST api /registration (profil 6)
 
 POST http://localhost:3000/v1/registration
@@ -48,13 +53,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiO
 
 POST http://localhost:3000/v1/questions/5
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwc2V1ZG8iOiJUZXN0ZTEiLCJkYXRlIjoiMjAyMS0wMy0xNlQwOTo0NzoxOC41ODJaIiwiaWF0IjoxNjE1ODg2MTIwfQ.3Z6zvYDxFCycdO242wvxmidLYQgHWU9fcsx75EgxIWw
-
 Content-Type: application/json
 
 {
-    "statement": "Q2 Qu''y a t-il dans votre dressing ?",
-    "answer_id": 5,
-    "question_id": 2
+    "level_id": 2
 }
 
 

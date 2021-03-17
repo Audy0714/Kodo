@@ -1,3 +1,4 @@
+// Challenge Model
 class Challenge {
     id;
     day;

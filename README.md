@@ -1,6 +1,6 @@
 ## Project
 
-La transition écologique kodo-ecolo
+La transition écologique kodo-ecologie
 
 ## Stack
 
