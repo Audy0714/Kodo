@@ -123,29 +123,33 @@ const userController = {
      * @async   
      * @function modifyUser - modify data user
      * @param  { Express.Request } request - userMapper.oneUser(id)
-     * @param  { Express.Response } response - response.json(theUser)
+     * @param  { Express.Request } request - userMapper.updateUser(body)
+     * @param  { Express.Response } response - response.json(updateUser)
      */
     modifyUser: async (request, response) => {
+
         request.body.id = request.user.id;
         
         const user = await userMapper.oneUser(request.user.id);
          // if the user not exists
-            if (!user) return response.status(400).json(`The user don't exist with id ${id}`);
+        if (!user) return response.status(400).json(`The user don't exist with id ${id}`);
 
-            
         try {
 
             const updatedUser = await userMapper.updateUser(request.body);
             response.status(200).json(updatedUser);
 
         } catch (error) {
+
             response.status(403).json(error.message);
         }
-
-         
-               
+           
     }
 
 };
 
+/**
+ * A module representing a userController
+ * @export userController
+ */
 module.exports = userController;

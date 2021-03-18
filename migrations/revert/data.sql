@@ -2,6 +2,6 @@
 
 BEGIN;
 
-    TRUNCATE "user", article, challenge, answer, question, "level";
+TRUNCATE "user", article, challenge, answer, question, "level";
 
 COMMIT;

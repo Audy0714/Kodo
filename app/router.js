@@ -69,6 +69,12 @@ router.get('/challenges/:id(\\d+)', auth, challengeController.findOne);
 /**
 *  @route POST /registration
  * @group User - management of the collection of user
+ * @param { String } email - email user
+ * @param { String } password - password user
+ * @param { String } firstName - firstname user
+ * @param { String } lastName - lastname user
+ * @param { String } pseudo - pseudo user
+ * @param { String } img - img user
  * @return { JSON } - the new user
  */
 router.post('/registration', validateBody(userSchema), userController.signupAction);
@@ -77,17 +83,17 @@ router.post('/registration', validateBody(userSchema), userController.signupActi
 /**
 *  @route POST /login
  * @group User - management of the collection of user
+ * @param { String } userEmail - email user
+ * @param { String } password - password user
  * @return { JSON } - the user connected
  */
 router.post('/login', userController.loginAction);
 
 /**
-*  @route POST /questions/:id
+*  @route POST /questions
  * @group Question - management of the collection of questions
- * @param { Number } id.path.required - id of the question
- * @param { String } - user responses
  * @param { Number } - user level
- * @return { JSON } - the user responses with level_id
+ * @return { JSON } - the user with level_id
  */
 router.post('/questions', auth, questionController.handleQuestionForm);
 
@@ -106,4 +112,8 @@ router.use((request, response, next) => {
     next();
 });
 
+/**
+ * A module representing a router
+ * @export router
+ */
 module.exports = router;

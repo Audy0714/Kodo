@@ -10,6 +10,7 @@ const articleController = {
      * @param  { Express.Response } response - response.json(articles)
      */
     findAll: async (request, response) => {
+
         const articles = await articleMapper.allArticles();
 
         response.json(articles);
@@ -22,6 +23,7 @@ const articleController = {
      * @param  { Express.Response } response - response.json(article)
      */
     findOne: async (request, response) => {
+
         const { id } = request.params;
 
         const article = await articleMapper.oneArticle(id);
@@ -30,4 +32,8 @@ const articleController = {
     }
 };
 
+/**
+ * A module representing a articleController
+ * @export articleController
+ */
 module.exports = articleController;

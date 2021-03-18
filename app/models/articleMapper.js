@@ -28,4 +28,8 @@ const articleMapper = {
     }
 };
 
+/**
+ * A module representing a articleMapper
+ * @export articleMapper
+ */
 module.exports = articleMapper;

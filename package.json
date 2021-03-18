@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node index.js",
-    "deploy": "sqitch deploy db:pg:kodo-ecolo"
+    "deploy": "sqitch deploy db:pg:kodo-ecologie"
   },
   "repository": {
     "type": "git",

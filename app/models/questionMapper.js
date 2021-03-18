@@ -22,4 +22,8 @@ const questionMapper = {
     }
 };
 
+/**
+ * A module representing a questionMapper
+ * @export questionMapper
+ */
 module.exports = questionMapper;

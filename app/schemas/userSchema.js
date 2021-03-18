@@ -10,5 +10,8 @@ const userSchema = Joi.object({
     date: Joi.date()
   
 });
-
+/**
+ * A module representing a userSchema
+ * @export userSchema
+ */
 module.exports = userSchema;

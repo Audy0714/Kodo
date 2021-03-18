@@ -32,4 +32,8 @@ const challengeController = {
     }
 };
 
+/**
+ * A module representing a challengeController
+ * @export challengeController
+ */
 module.exports = challengeController;

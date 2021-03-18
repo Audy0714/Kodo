@@ -25,7 +25,6 @@ const userMapper = {
      * @param { String } last_name - the lastName of the user
      * @param  { String } pseudo - the pseudo of the user
      * @param { String } img - the img of the user
-     * @param { String } date - the date of the user response questions
      * @return { Promise } - the promise insert new user in the BDD
      */
     save: async (theUser) => {
@@ -34,7 +33,8 @@ const userMapper = {
 
             await db.query(`
             INSERT INTO "user" (email, password, first_name, last_name, pseudo, img)
-            VALUES($1, $2, $3, $4, $5, $6) RETURNING id;`, [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]);
+            VALUES($1, $2, $3, $4, $5, $6) RETURNING id;`,
+            [theUser.email, theUser.password, theUser.firstName, theUser.lastName, theUser.pseudo, theUser.img]);
 
         } catch (error) {
 
@@ -66,9 +66,9 @@ const userMapper = {
      * @return { Promise } the promise of modify data user
      */
     updateUser: async (theUser) => {
-        const {id, email, password, firstName, lastName, pseudo, img} = theUser;
-        const { rows } = await db.query(
-            `
+        const { id, email, password, firstName, lastName, pseudo, img } = theUser;
+
+        const { rows } = await db.query(`
             UPDATE "user" 
                 SET email = $1,
                     password = $2,
@@ -77,18 +77,28 @@ const userMapper = {
                     pseudo = $5,
                     img = $6
                 WHERE id = $7 RETURNING *`,
-        [email, password, firstName, lastName, pseudo, img, id]
-        );
+        [email, password, firstName, lastName, pseudo, img, id]);
+
         return new User(rows[0]);
        
     },
-
+    /**
+     * @function setLevel - the level_id of the user
+     * @param  { Number } id - id user
+     * @param  { Number } level_id - level_id user
+     * @returns { Promise } the promise of level_id 
+     */
     setLevel: async (user) => {
         const {id, level_id} = user;
+
         const { rows } = await db.query('UPDATE "user" SET level_id = $1, date = NOW()::timestamp with time zone WHERE id = $2', [level_id, id]);
 
         return new User(rows[0]);
     }
 };
 
+/**
+ * A module representing a userMapper
+ * @export userMapper
+ */
 module.exports = userMapper;

@@ -26,7 +26,7 @@ sqitch revert db:pg:kodo-ecologie
 sqitch verify db:pg:kodo-ecologie
 
 npm start for node index.js
-npm test for TU
+npm test for TU (mocha/chai)
 
 
 ### Deployment method

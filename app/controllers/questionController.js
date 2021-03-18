@@ -51,4 +51,8 @@ const questionController = {
     }
 };
 
+/**
+ * A module representing a questionController
+ * @export questionController
+ */
 module.exports = questionController;

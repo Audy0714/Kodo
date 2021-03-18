@@ -33,4 +33,8 @@ const challengeMapper = {
     }
 };
 
+/**
+ * A module representing a challengeMapper
+ * @export challengeMapper
+ */
 module.exports = challengeMapper;
