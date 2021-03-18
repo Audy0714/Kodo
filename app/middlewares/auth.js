@@ -4,11 +4,11 @@ require('dotenv').config();
 
 function auth(request, response, next) {
 	// je le reçois du coté front
-	const authHeader = req.headers.authorization;
+	const authHeader = request.headers.authorization;
 	// token d'authentification reçu lors de la connexion de l'utilisateur (sécurité)
 	const token = authHeader && authHeader.split(' ')[1];
 
-	if (!token) return res.status(401).json('Access denied. No token provided');
+	if (!token) return response.status(401).json('Access denied. No token provided');
 
 	try {
 
