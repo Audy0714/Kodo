@@ -11,7 +11,7 @@ const challengeMapper = {
      */
     allChallenges: async () => {
         const result = await db.query(`
-            SELECT challenge.id, "day", challenge.description, article.title, article.slug, article.description, article.story, article.how, article.why FROM challenge 
+            SELECT challenge.id, "day", challenge.description AS challenge_description, article.title, article.slug, article.description AS article_description, article.story, article.how, article.why FROM challenge 
             JOIN article ON challenge.id = article.challenge_id;`);
 
          return result.rows.map(challenge => new Challenge(challenge));
@@ -25,7 +25,7 @@ const challengeMapper = {
     oneChallenge: async (id) => {
 
         const { rows } = await db.query(`
-            SELECT challenge.id, "day", challenge.description, article.title, article.slug, article.description, article.story, article.how, article.why FROM challenge 
+            SELECT challenge.id, "day", challenge.description AS challenge_description, article.title, article.slug, article.description AS article_description, article.story, article.how, article.why FROM challenge 
             JOIN article ON challenge.id = article.challenge_id 
             WHERE challenge.id = $1;`, [id]);
 

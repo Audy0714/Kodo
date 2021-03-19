@@ -128,6 +128,13 @@ const userController = {
      */
     modifyUser: async (request, response) => {
 
+        // generate salt
+        const salt = await bcrypt.genSalt(10);
+        // hash password
+        const hashPassword = await bcrypt.hash(request.body.password, salt);
+
+        request.body.password = hashPassword;
+
         request.body.id = request.user.id;
         
         const user = await userMapper.oneUser(request.user.id);
