@@ -13,6 +13,7 @@ const _ = require('lodash');
 const userMapper = require('../models/userMapper');
 
 const User = require('../models/user');
+const { updateUser } = require('../models/userMapper');
 
 const userController = {
 
@@ -144,7 +145,19 @@ const userController = {
         try {
 
             const updatedUser = await userMapper.updateUser(request.body);
-            response.status(200).json(updatedUser);
+
+            // token
+            const newUser = _.pick(updatedUser, [
+                'id',
+                'email',
+                'pseudo',
+                'level_id',
+                'img',
+                'firstName',
+                'lastName'
+            ]);
+
+            response.status(200).json(newUser);
 
         } catch (error) {
 
