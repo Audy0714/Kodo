@@ -13,7 +13,6 @@ const _ = require('lodash');
 const userMapper = require('../models/userMapper');
 
 const User = require('../models/user');
-const { updateUser } = require('../models/userMapper');
 
 const userController = {
 
@@ -156,6 +155,11 @@ const userController = {
                 'firstName',
                 'lastName'
             ]);
+
+            const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
+
+            newUser.token = token;
+
 
             response.status(200).json(newUser);
 

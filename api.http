@@ -34,7 +34,7 @@ Content-Type: application/json
 
 {
    
-    "email": "azertyy@gmail.com",
+    "email": "azerty@gmail.com",
     "password": "oklm"
 }
 
@@ -79,7 +79,7 @@ Content-Type: application/json
     "password": "oklm",
     "firstName": "Abramss",
     "lastName": "Pomposselli",
-    "pseudo": "Brams75",
+    "pseudo": "Brams",
     "img": "https://images.pexels.com/photos/4107282/pexels-photo-41072"
 }
 
