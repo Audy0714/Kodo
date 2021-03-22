@@ -156,10 +156,9 @@ const userController = {
                 'lastName'
             ]);
 
-            const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
+            //const token = jwt.sign(newUser, process.env.JWTPRIVATEKEY);
 
-            newUser.token = token;
-
+            //newUser.token = token;
 
             response.status(200).json(newUser);
 

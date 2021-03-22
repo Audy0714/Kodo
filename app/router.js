@@ -103,7 +103,7 @@ router.post('/questions', auth, questionController.handleQuestionForm);
  * @param { Number } id.path.required - id of the user
  * @return { JSON } - the user modify
 */
-router.patch('/settings/profil/:id(\\d+)', auth, userController.modifyUser);
+router.patch('/settings/profil/:id(\\d+)', auth, validateBody(userSchema), userController.modifyUser);
 
 // here, a 404 for the API
 router.use((request, response, next) => {

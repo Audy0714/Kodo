@@ -1,7 +1,10 @@
 ## Project
 
-La transition écologique kodo-ecologie
+La transition écologique Back-end du projet : kodo-ecologie
 
+Role : Lead dev back
+
+La transition écologique - Front-end du projet - https://github.com/O-clock-Nemo/projet-la-transition-ecologique
 ## Stack
 
 - Node 10+
@@ -27,7 +30,6 @@ sqitch verify db:pg:kodo-ecologie
 
 npm start for node index.js
 npm test for TU (mocha/chai)
-
 
 ### Deployment method
 
